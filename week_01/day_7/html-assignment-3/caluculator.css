@@ -1,0 +1,40 @@
+body{
+	background-color:green;
+}
+
+.container{
+	width:395px;
+	padding:14px 12px 12px 7px;
+	margin:0px auto;
+	margin-top:200px;
+}
+
+.skyblue{
+	background-color:skyblue;
+	
+}
+.white{
+	background-color:white;
+}
+.yellow{
+	background-color:yellow;
+}
+.red{
+	background-color:red;
+}
+.displayOutput{
+	padding:40px 0px;
+	margin-left:10px;
+}
+.visible{
+	display:flex;
+}
+.button{
+	padding:40px;
+	margin-top:10px;
+	margin-left:10px;
+}
+.space{
+	padding:42px;
+}
+
