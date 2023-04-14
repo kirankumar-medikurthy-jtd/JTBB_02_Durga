@@ -1,0 +1,219 @@
+.container{
+	height:100px;
+	width:70%;
+	display:flex;
+	margin-left:200px;
+}
+
+.navbar{
+	margin-left:740px;
+	margin-top:30px;
+}
+.home{
+	font-size:20px;
+	text-decoration:none;
+	color:black;
+}
+hr{
+	margin-top:5px;
+}
+.home1{
+	margin-left:50px;
+	font-size:20px;
+	text-decoration:none;
+	color:black;
+}	
+.about{
+	color:#454545 ;
+	margin-left:200px;
+}
+.heading1{
+	    margin-left:200px;
+	    margin-top: 0px;
+	    margin-bottom: 0px;
+	    font-family: cursive;;
+	    color: #000;
+	    font-size: 54px;
+	    line-height: 60px;
+	    font-weight: 400;
+  	    text-transform: uppercase;
+  	    word-spacing: 20px;
+}
+.crane{
+	margin-top:120px;
+	height:700px;
+	width:100%;
+}
+#noise{
+	margin-left:200px;
+	font-size:30px;
+	margin-top:100px;
+}
+.content{
+	margin-left:200px;
+	font-size:20px;
+	margin-top:10px;
+}
+.contact{
+	margin-left:200px;
+	margin-top:200px;
+}
+.space{
+	margin-top:100px;
+}
+.team{
+	margin-left:200px;
+	margin-top:100px;
+}
+.editor{
+	height:300px;
+	width:68%;
+	margin-left:180px;
+	display:flex;
+	margin-top:50px;
+}
+.managing{
+	height:300px;
+	width:300px;
+	margin-left:10px;
+}
+.job{
+	color:#454545 ;
+}
+.touch{
+	font-size:30px;
+	margin-left:200px;
+	margin-top:100px;
+}
+.senior{
+	font-size:20px;
+	margin-left:200px;
+}
+.press{
+	height:500px;
+	width:68%;
+	margin-left:180px;
+	display:flex;
+}
+.adress{
+	height:300px;
+	width:400px;
+	border:1px solid black;
+	margin-left:20px;
+	margin-top:50px;
+}
+.general{
+	height:80px;
+	width:80px;
+	border:2px solid black;
+	border-radius:50px;
+	margin-top:50px;
+	margin-left:100px;
+	background-color:black;
+}
+.white{
+ 	color:white;
+ 	margin-left:34px;
+ 	margin-top:26px;
+}
+.align{
+	text-align:center;
+	color:#454545 ;
+	
+}
+.just{
+	font-size:20px;
+	text-align:center;
+	
+}
+
+
+#footer{
+	border:1px solid red;
+	height:700px;
+	width:100%;
+	background-color:black;
+	color:white;
+}
+#footer-1{
+	display:flex;
+}
+.categories{
+	display:flex;
+	margin-left:180px;
+	
+}
+.categories h3{
+	margin-left:20px;
+}
+.information{
+	margin-top:120px;
+	color:#454545 ;
+}
+#information{
+	margin-left:180px;
+	margin-top:100px;
+}
+.animation{
+	margin-left:180px;
+	color:#454545 ;
+	margin-top:50px;
+}
+#horizantal{
+	color:#454545 ;
+}
+.product{
+	margin-left:-25px;
+}
+#interactive{
+	margin-left:120px;
+}
+#interactive2{
+	margin-left:180px;
+}
+#interactive1{
+	margin-left:130px;
+}
+.categories1 h3{
+	color:#454545 ;
+}
+.categories1{
+	display:flex;
+	margin-left:200px;
+	
+}
+.about{
+      display:flex;
+}
+.insta
+{
+	color:white;
+}
+.insta1{
+	color:white;
+	margin-left:220px;
+}
+.insta2{
+	color:white;
+	margin-left:170px;
+}
+.insta3{
+	color:white;
+	margin-left:200px;
+}
+.insta4{
+	color:white;
+	margin-left:160px;
+}
+.email{
+	margin-left:100px;
+	margin-top:50px ;
+	padding:20px 70px;
+}
+.send{
+	margin-top:50px;
+	padding:20px 40px;
+	background-color:black;
+	color:white;
+}
+

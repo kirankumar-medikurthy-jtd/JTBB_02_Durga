@@ -1,0 +1,142 @@
+.container{
+	height:100px;
+	width:70%;
+	display:flex;
+	margin-left:200px;
+}
+
+.navbar{
+	margin-left:740px;
+	margin-top:30px;
+}
+.home{
+	font-size:20px;
+	text-decoration:none;
+	color:black;
+}
+hr{
+	margin-top:5px;
+}
+.home1{
+	margin-left:50px;
+	font-size:20px;
+	text-decoration:none;
+	color:black;
+}
+.latest{
+	margin-left:200px;
+	font-size:40px;
+}
+.creativity{
+	height:500px;
+	width:400px;
+	margin-left:15px;
+	
+}
+.house{
+	width:69%;
+	height:500px;
+	margin-left:180px;
+	margin-top:20px;
+	display:flex;
+}
+.summer{
+	width:400px;
+	height:250px;
+}
+.text{
+	color:#454545 ;
+}
+.text1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Tenor Sans', sans-serif;
+    color: #000;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+     
+}
+#footer{
+	border:1px solid red;
+	height:600px;
+	width:100%;
+	background-color:black;
+	color:white;
+}
+#footer-1{
+	display:flex;
+}
+.categories{
+	display:flex;
+	margin-left:180px;
+	
+}
+.categories h3{
+	margin-left:20px;
+}
+.information{
+	margin-top:120px;
+	color:#454545 ;
+}
+#information{
+	margin-left:180px;
+	margin-top:100px;
+}
+.animation{
+	margin-left:180px;
+	color:#454545 ;
+	margin-top:50px;
+}
+#horizantal{
+	color:#454545 ;
+}
+.product{
+	margin-left:-25px;
+}
+#interactive{
+	margin-left:120px;
+}
+#interactive2{
+	margin-left:180px;
+}
+#interactive1{
+	margin-left:130px;
+}
+.categories1 h3{
+	color:#454545 ;
+}
+.categories1{
+	display:flex;
+	margin-left:200px;
+	
+}
+.about{
+      display:flex;
+}
+.insta
+{
+	margin-left:200px;
+}
+.insta1{
+	margin-left:210px;
+}
+.insta2{
+	margin-left:160px;
+}
+.insta3{
+	margin-left:200px;
+}
+.email{
+	margin-left:100px;
+	margin-top:50px ;
+	padding:20px 70px;
+}
+.send{
+	margin-top:50px;
+	padding:20px 40px;
+	background-color:black;
+	color:white;
+}
+
