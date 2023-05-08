@@ -1,0 +1,25 @@
+input{
+    padding: 20px 130px;
+    font-size: 30px;
+    margin: 200px 0px 100px 450px;
+}
+button{
+    padding: 20px 60px;
+    font-size: 30px;
+    margin: 10px 0px 100px 0px;
+    background-color: aqua;
+}
+body{
+    background-image: linear-gradient(to left, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+.todo{
+    padding: 20px 300px 20px 20px;
+    margin: 10px 0px 10px 450px;
+    font-size: 30px;
+}
+.delete{
+    padding: 10px 15px 5px 17px;
+    font-size: 30px;
+    margin: 20px 0px 0px 280px;
+    background-color: red;
+}

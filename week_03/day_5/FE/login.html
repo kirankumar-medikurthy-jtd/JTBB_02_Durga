@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>login page</title>
+	</head>
+	<style>
+		h1{
+			font-size:60px;
+			text-align:center;
+			color:brown;
+		}
+		.login{
+			padding:100px 600px;
+			display:flex;
+			flex-direction:column;
+		}
+		.name{
+			padding:15px;
+			font-size:30px;
+			border-radius:5px;
+			margin-top:10px;
+		}
+		.mobile{
+			padding:15px;
+			font-size:30px;
+			margin-top:20px;
+			border-radius:5px;
+		}
+		.submit{
+			padding:15px;
+			font-size:30px;
+			margin-top:20px;
+			background-color:brown;
+			color:white;
+			border-radius:5px;
+			border:none;
+		}
+		
+	</style>
+	<body>
+		<div class="login">
+			<h1>Enter the Details</h1>
+			<input type="text" placeholder="enter your full name" class="name">
+			<input type="number" placeholder="enter phone number" class="mobile">
+			<input type="button" value="CREATE" class="submit">
+		</div>
+	<body>
+	<script>
+		var name=document.getElementsByClassName("name");
+		var mobileNumber=document.getElementsByClassName("mobile");
+		var submit=document.getElementsByClassName("submit");
+		submit.onclick=function(){
+			let nameTag=document.createElement("div");
+			let mobileTag=document.createElement("div");
+			nameTag.textContent("name : "(nameTag.value))
+			mobileTag.textContent("mobile :"(mobileTag.value))
+			nameTag.append(nameTag,mobileTag)     
+			nameTag.style.backgroundColor="grey";
+			
+			
+		}
+		
+	</script>
+</html>

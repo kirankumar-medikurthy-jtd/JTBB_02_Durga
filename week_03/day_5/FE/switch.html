@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>switch on the bulb</title>
+	</head>
+	<style>
+		#bulb{
+			height:200px;
+			width:200px;
+			border:2px solid black;
+			border-radius:50%;
+			
+		}
+		.background{
+			margin-top:20px;
+		}
+	</style>
+	<body>
+		<div id="bulb" onclick="changebackgroundcolor()" onclick="changebackgroundcolor()"></div>
+		<button class="background" onclick="changebackgroundcolor()">On</button>
+	</body>
+	<script>
+		let button=document.querySelector(".background");
+		button.onclick=function(){
+			let display=document.querySelector("#bulb");
+			display.style.backgroundColor="orange";
+		}
+		function changebackgroundcolor(){
+			
+		}
+	</script>
+	</script>
+	
+	
+	
+</html>
+

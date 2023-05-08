@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Cards play</title>
+	</head>
+	<style>
+		h1{
+			text-align:center;
+		}
+		.play{
+			border:2px solid black;
+			height:650px;
+			width:700px;
+			margin:auto;
+		}
+		button{
+			padding:20px;
+			background-color:aqua;
+			color:white;
+			border:none;
+			border-radius:10px;
+		}
+		#card > div{
+				background-color: blue;
+				color: white;
+				padding: 20px;
+				margin: 10px;
+		}
+		#card{
+			display:flex;
+			flex-wrap:wrap;
+			width:700px;
+		}
+	</style>
+	<body>
+		<div class="play">
+		<h1 id="color">Cards play</h1>
+		<div id="button">
+		<button onclick="clickButton()">click me</button>
+		</div>
+		<div id="card"></div>
+		</div>
+	</body>
+	<script>
+		        function clickButton(){
+				let button = document.getElementById("button");
+				button.innerHTML = "";
+				let cards = document.getElementById("card");
+				for(let i=1; i<=60; i++){
+					let card = createCard(i);
+					cards.appendChild(card);
+					
+				}
+				
+			}
+			function createCard(cardNumber) {
+				let card = document.createElement("div");
+				card.innerHTML = cardNumber;
+				card.setAttribute("onclick", `displayNumber(${cardNumber})`)
+				return card;
+			}
+			function displayNumber(number){
+				let cardNum=document.getElementById("color");
+				color.innerHTML=`cardplay:${number}`
+			}
+			
+		
+	</script>
+</html>

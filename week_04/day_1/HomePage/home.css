@@ -1,0 +1,45 @@
+.container{
+	height:100px;
+	width:70%;
+	display:flex;
+	margin-left:200px;
+}
+.navbar{
+	margin-left:200px;
+	margin-top:30px;
+}
+.home{
+	font-size:20px;
+	text-decoration:none;
+	color:whitesmoke;
+}
+.home1{
+	margin-left:50px;
+	font-size:20px;
+	text-decoration:none;
+	color:whitesmoke;
+}
+.iamge{
+    text-decoration: none;
+}
+hr{
+    margin-top: 60px;
+}
+/* body{
+    background-color: skyblue;
+} */
+.login{
+	margin-top: -25px;
+	margin-left:100px;
+	color: whitesmoke;
+}
+.home2{
+	margin-left:200px;
+	font-size:20px;
+	text-decoration:none;
+	color:whitesmoke;
+}
+body{
+	background-image: url("https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMThiYXRjaDQta2F0aWUtMTcuanBn.jpg");
+	background-size: cover;
+}

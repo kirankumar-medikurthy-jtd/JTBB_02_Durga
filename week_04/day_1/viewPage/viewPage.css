@@ -1,0 +1,31 @@
+.navBar{
+    padding: 50px;
+    color: black;
+    font-size: 40px;
+
+
+}
+.view{
+    margin-left: 800px;
+}
+div > a{
+    text-decoration:none;
+}
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    #card{
+    width: 300px;
+    }
+    
+    .card{
+    border: 1px solid brown;
+    background-color: aqua;
+    color: brown;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    }
+    

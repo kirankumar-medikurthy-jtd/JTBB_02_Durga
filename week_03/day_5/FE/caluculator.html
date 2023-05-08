@@ -1,0 +1,216 @@
+ <html>
+     <head>
+     	  <title>calculator</title>
+     	<style>
+     	  .green{
+	background-color: green;
+}
+
+	.white{
+		background-color: white;
+	}
+
+	.grey{
+		background-color: grey;
+	}
+
+	.red{
+		background-color: red;
+	}
+
+	.blue{
+		background-color: skyblue;
+	}
+
+	.yellow{
+		background-color: yellow;
+	}
+
+	.calculator{
+		width: 390px;
+		padding: 10px;
+		margin: 0 auto;
+		margin-top: 200px
+	}
+
+	.display{
+		padding: 30px;
+		margin: 8px; 
+	}
+
+	.container{
+		display: flex;
+	}
+
+	.button{
+		margin: 10px;
+		padding: 30px 35px;	
+	}
+
+	.moreSpace{
+		padding: 30px 37px;
+	}
+    </style>
+     </head>
+     <body class="green">
+     	     <div class="calculator blue">
+     	     	<div class="display grey" type="text" name="display"></div>
+     	     	
+     	     	<div class="container">
+     	     		 <div class="button white" id="one" >1</div>
+     	     		<div class="button white" id="two" >2</div>
+     	     		<div class="button white" id="three">3</div>
+     	     		<div class="button yellow" id="plus" >+</div>
+     	     		 
+     	     	</div>
+     	     	
+     	     	<div class="container">
+     	     		<div class="button white" id="four">4</div>
+     	     		<div class="button white" id="five">5</div>
+     	     		<div class="button white" id="six">6</div>
+     	     		<div class="button yellow moreSpace" id="minus">-</div>
+     	     	</div>
+     	     	
+     	     	<div class="container">
+     	     		<div class="button white" id="seven">7</div>
+     	     		<div class="button white" id="eight">8</div>
+     	     		<div class="button white" id="nine">9</div>																						
+     	     		<div class="button yellow" id="mul">*</div>	
+     	     	</div>	
+     	     	<div class="container">
+     	     		<div class="button red" id="clear">c</div>
+     	     		<div class="button white" id="zero">0</div>
+     	     		<div class="button white" id="equal">=</div>
+     	     		<div class="button yellow moreSpace" id="div">/</div> 
+     	     	</div>
+     	     </div>	
+     </body>
+     <script> 
+     		let submitButton = document.querySelector("#one");
+     		let submit=submitButton.innerText;
+     		submitButton.onclick = function() {
+			let display = document.querySelector(".display");
+			display.append(submit);
+		}
+		let submitButton1 = document.querySelector("#two");
+     		let submit1=submitButton1.innerText;
+     		submitButton1.onclick = function() {
+			let display1 = document.querySelector(".display");
+			display1.append(submit1);
+		}
+		let submitButton2 = document.querySelector("#three");
+     		let submit2=submitButton2.innerText;
+     		submitButton2.onclick = function() {
+			let display2 = document.querySelector(".display");
+			display2.append(submit2);
+		}
+		let submitButton3 = document.querySelector("#plus");
+     		let submit3=submitButton3.innerText;
+     		submitButton3.onclick = function() {
+			let display3 = document.querySelector(".display");
+			display3.append(submit3);
+		}
+		let submitButton4 = document.querySelector("#four");
+     		let submit4=submitButton4.innerText;
+     		submitButton4.onclick = function() {
+			let display4 = document.querySelector(".display");
+			display4.append(submit4);
+		}
+		let submitButton5 = document.querySelector("#five");
+     		let submit5=submitButton5.innerText;
+     		submitButton5.onclick = function() {
+			let display5 = document.querySelector(".display");
+			display5.append(submit5);
+		}
+		let submitButton6 = document.querySelector("#six");
+     		let submit6=submitButton6.innerText;
+     		submitButton6.onclick = function() {
+			let display6 = document.querySelector(".display");
+			display6.append(submit6);
+		}
+		let submitButton7 = document.querySelector("#minus");
+     		let submit7=submitButton7.innerText;
+     		submitButton7.onclick = function() {
+			let display7 = document.querySelector(".display");
+			display7.append(submit7);
+		}
+		let submitButton8 = document.querySelector("#seven");
+     		let submit8=submitButton8.innerText;
+     		submitButton8.onclick = function() {
+			let display8 = document.querySelector(".display");
+			display8.append(submit8);
+		}
+		let submitButton9 = document.querySelector("#eight");
+     		let submit9=submitButton9.innerText;
+     		submitButton9.onclick = function() {
+			let display9 = document.querySelector(".display");
+			display9.append(submit9);
+		}
+		let submitButton10 = document.querySelector("#nine");
+     		let submit10=submitButton10.innerText;
+     		submitButton10.onclick = function() {
+			let display10 = document.querySelector(".display");
+			display10.append(submit10);
+		}
+		let submitButton11 = document.querySelector("#mul");
+     		let submit11=submitButton11.innerText;
+     		submitButton11.onclick = function() {
+			let display11 = document.querySelector(".display");
+			display11.append(submit11);
+		}
+		let submitButton12 = document.querySelector("#clear");
+     		let submit12 = submitButton12.innerText;
+     		submitButton12.onclick = function() {
+			let display12 = document.querySelector(".display");
+			display12.append(submit12);
+		}
+		let submitButton13 = document.querySelector("#zero");
+     		let submit13=submitButton13.innerText;
+     		submitButton13.onclick = function() {
+			let display13 = document.querySelector(".display");
+			display13.append(submit13);
+		}
+		let submitButton14 = document.querySelector("#equal");
+     		let submit14=submitButton14.innerText;
+     		submitButton14.onclick = function() {
+			let display14 = document.querySelector(".display");
+			display14.append(submit14);
+		}
+		let submitButton15 = document.querySelector("#div");
+     		let submit15=submitButton15.innerText;
+     		submitButton15.onclick = function() {
+			let display15 = document.querySelector(".display");
+			display15.append(submit15);
+		}
+		function symbol(a,b){
+			let str="+_*/=";
+			let str1=str.split("")
+			console.log(str1)
+			if(str1=="+"){
+				return a+b;
+			}
+			else if(str1=="-"){
+				return a-b;
+			}
+			else if(str1=="*"){
+				return a*b;
+			}
+			else if(str1=="/"){
+				return a/b;
+			}
+			else if(str1=="="){
+				return a=b;
+			}
+			
+	        }
+		
+		
+		
+     		
+	      
+     </script>
+</html>
+
+
+
+

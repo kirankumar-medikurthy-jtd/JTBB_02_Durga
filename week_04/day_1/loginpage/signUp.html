@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>signUp page</title>
+    </head>
+    <style>
+            .backgroundImage{
+               height: 850px;
+               width:100%;
+               background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+               padding-top: 70px;
+            } 
+            .signup{
+                color:white;
+                text-align: center;
+                font-size: 50px;
+
+            }
+            .page{
+                height: 700px;
+                width: 550px;
+                margin: auto;
+                background-color: #2af598;
+         	    opacity:0.8;
+                border-radius:20px;
+            }
+            input{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                font-size: 30px;
+                padding: 10px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+            #button{
+                padding: 20px 80px;
+                background-color: aqua;
+                margin: auto;
+                border: none;
+                margin-top: 40px;
+                border-radius: 20px;
+                margin-left: 150px;
+            }
+            .login{
+                text-align: center;
+            }
+    </style>
+    <body>
+          <div class="backgroundImage">
+            <div class="page">
+                <h1 class="signup"><i>SIGN UP</i></h1>
+                
+                    <input type="text" placeholder="Enter Your Name" class="name" />
+                    <input type="text" placeholder="Enter Your User name" class="userName"/>
+                    <input type="password" placeholder="Enter Your Password" class="password"/>
+                  <!--  <input type="number" placeholder="Enter Your Phonenumber" class="number"/>-->
+                    <input type="email" placeholder="Enter Your Email Id" class="email"/>
+                    <input type="text" placeholder="enter your Admin code " class="adminCode">
+                    <h3 class="login">Already a member?<a href="../loginpage/login.html">LOGIN</a></h3>
+                    <button id="button">SIGNUP</button>
+                    <button onclick="clickbutton()"></button>
+            </div>
+          </div>
+    </body>
+    <script>
+          var signupdata=JSON.parse(localStorage.getItem("loginData"));
+            if(signupdata){
+            window.location.href="../HomePage/home.html";
+            }
+            else{
+    	 let signUp=localStorage.getItem("loginData");
+         console.log(signUp);
+        window.location.href="../loginpage/login.html";
+        let button=document.querySelector("#button");
+        result=JSON.parse(localStorage.getItem("signUpData")) || []
+        adminCode=JSON.parse(localStorage.getItem("durga")) || []
+        button.onclick = function(){
+            let name=document.querySelector(".name").value;
+            let UserName=document.querySelector(".userName").value;
+            let password=document.querySelector(".password").value;
+            let email=document.querySelector(".email").value;
+            let admin=document.querySelector(".adminCode").value;
+           // let resultantData = JSON.parse(localStorage.getItem("details")) || [];
+           let adminCode=JSON.parse(localStorage.getItem("adminCode")) || [];
+            if(name !=="" && UserName !=="" &&  password !==""  &&  email !== ""){
+                for(let i=0;i<result.length;i++){
+                    if(result[i].UserName==userName){
+                        alert("user alredy exist")
+                        return;
+                    }
+                }
+                if(admin === "" || admin === adminCode)
+                var signupdata=JSON.parse(localStorage.getItem("loginUser"));
+                 localStorage.setItem("signUpData",JSON.stringify([...result,{name,UserName,password,email, admin : admin === "" ? false : true}]));
+                    localStorage.setItem("loginData",JSON.stringify({name,UserName,password,email,admin :   (admin === "" ? false : true)}));
+                    console.log(localStorage.getItem("signUpData"));
+                    alert("account created successful")
+		    window.location.href="../HomePage/home.html";
+			
+		}
+		
+		else{
+			alert("Wrong Admin Code");
+		}
+		}
+    }
+        
+    </script>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>forgot password</title>
+    </head>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+        }
+        input{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 20px;
+
+        }
+        .align{
+            border-radius: 20px;
+            height: 500px;
+            width:600px;
+            margin: auto;
+            margin-top: 100px;
+            opacity:0.8;
+            background-color:#b49fda;
+            padding-top:10px;
+        }
+        .button{
+            padding: 20px 50px;
+            border-radius: 20px;
+            background-color: aqua;
+            border: none;
+            margin-left: 200px;
+            margin-top: 50px;
+
+        }
+        h1{
+        	text-align:center;
+        	margin-top:30px;
+        }
+        .name{
+              margin-top:50px;
+        }
+    </style>
+    <body>
+         <div class="align">
+            <div>
+            	<h1><I>FORGOT PAGE</I></h1>
+                <input type="text" placeholder="enter your name" class="name">
+                <input type="password" placeholder="enter your new password" class="password">
+                <input type="password" placeholder="confirm password" class="new">
+                <button class="button">CREATE</button> 
+            </div>
+        </div>
+    </body>
+    <script>
+        let button=document.querySelector(".button");
+        button.onclick=function(){
+            let UserName=document.querySelector(".name").value;
+            let password=document.querySelector(".password").value;
+            let newPassword=document.querySelector(".new").value;
+            let result=JSON.parse(localStorage.getItem("data")) || [];
+            if(password===newPassword){
+            let temp=[];
+		    for(let i=0;i<result.length;i++){
+		         
+		    	if(UserName == result[i].UserName){
+		    		if(password !== result[i].password){
+		    			let  bag={
+		    			   ...result,
+		    			   password:newPassword
+		    			}
+		    		
+		    		temp.push(bag);
+		    	}
+		    	}
+		    	 else{
+		    	 	temp.push(result[i]);
+                        }	
+		    
+            }
+            
+		    localStorage.setItem("data" , JSON.stringify(temp));
+		    alert("password is changed");
+		    window.location.href="login.html"
+            }
+            else{
+		   console.log(password,newPassword);
+		   alert("failed");
+            }
+            }
+        
+    </script>
+</html>
