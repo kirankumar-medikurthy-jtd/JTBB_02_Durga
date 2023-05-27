@@ -1,0 +1,17 @@
+/* Add CSS styles for the calendar here */
+#calendar {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    border-collapse: collapse;
+  }
+  
+  #calendar th {
+    background-color: #ccc;
+    padding: 5px;
+  }
+  
+  #calendar td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  

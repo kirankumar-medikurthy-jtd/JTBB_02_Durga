@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <style>
+        input{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 80px;
+            font-size: 20px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        div{
+            margin-top: 10%;
+        }
+        button{
+            margin: auto;
+            margin-left: 46%;
+            margin-top: 30px;
+            padding: 10px 40px;
+            font-size: 30px;
+            background-color: aqua;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+    <body>
+        <div>
+            <input class="first" type="text" placeholder="First Name">
+            <input class="second" type="text" placeholder="Last Name">
+            <input class="delay" type="text" placeholder="Delay Time">
+            <button class="button">click</button>
+        </div>
+        <div class="root">
+            
+        </div>
+    </body>
+    <script>
+        let button = document.querySelector(".button");
+        button.onclick=function(){
+                let temp=setInterval(()=>{
+                let firstName=document.querySelector(".first").value;
+                let lastName=document.querySelector(".second").value;
+                let delayTime=document.querySelector(".delay").value;
+                let root=document.querySelector(".root");
+                let div=document.createElement("div");
+                div.append(firstName,lastName);
+                root.append(div);
+            },1000);
+        }
+    </script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: gray;
+    }
+    .div{
+        height: 50px;
+        width: 100%;
+        background-color: navy;
+        display: flex;
+        padding-top: 15px;
+    }
+    a{
+      font-size: 30px;
+      color: white;
+      text-decoration: none;  
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-left: 500px;
+
+    }
+    .button{
+        padding: 10px 70px;
+        font-size: 30px;
+        background-color: gray;
+        color: aqua;
+        margin-left: 700px;
+        margin-top: 100px;
+    }
+    .content{
+        text-align: center;
+        color: white;
+    }
+</style>
+<body>
+    <nav>
+        <div class="div">
+            <a href="quotes.html" class="quote">quote</a>
+            <a href="allQuotes.html" class="all">All quote</a>
+        </div>
+    </nav>
+   <!-- <button class="button" onclick="quotesAll()"></button> -->
+    <div class="display"></div> 
+</body>
+<script>
+     async function fetchData(url){
+    const response = await fetch(url);
+    const jsonData = await response.json()
+    return jsonData
+    }
+    async function quotes(){
+        
+        let response=await fetchData(`https://api.quotable.io/quotes?=}`);
+        console.log(response)
+        let display=document.querySelector(".display");
+        let userData=response["results"];
+        for(let i=0;i<response.length;i++){
+            console.log(userData[i]);
+         }
+        if(userData){
+            for(let i=0;i<userData.length;i++){
+                let div=document.createElement("div");
+                div.setAttribute("class","card");
+                let content=document.createElement("h1");
+                content.innerHTML=userData[i].content;
+                content.setAttribute("class","content")
+                div.append(content);
+                display.append(div);
+            }
+        }
+    }
+    quotes();
+    
+
+</script>
+</html>

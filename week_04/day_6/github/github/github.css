@@ -1,0 +1,68 @@
+.image{
+    height: 50px;
+    width: 50px;
+    margin-left: 300px;
+    margin-top: 5px;
+    
+}
+.user{
+    margin-left: 400px;
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+.repo{
+    margin-left: 70px;
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+.topic{
+    margin-left: 70px;
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.git{
+    background-color: #74992e;
+    border-radius: 10px;
+    display: flex;
+}
+.img{
+    height: 900px;
+    width: 100%;
+}
+#input{
+    padding: 15px 120px;
+    margin-top: 100px;
+    margin-left: 500px;
+    font-size: 30px;
+
+}
+button{
+    padding: 13px 60px;
+    font-size: 30px;
+    color: aqua;
+    background-color: gray;
+}
+.card{
+    background-color: aqua;
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.data{
+    width: 1640px;
+    height: 900px;
+    margin-top: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}

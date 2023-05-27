@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+        body{
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        }
+    .image{
+        height: 50px;
+        width: 50px;
+        margin-left: 300px;
+        margin-top: 5px;
+    
+    }
+    .user{
+        margin-left: 800px;
+        font-size: 20px;
+        margin-top: 20px;
+        
+    }
+    /* div{
+        display: flex;
+    
+    } */
+    .repo{
+        margin-left: 70px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .topic{
+        margin-left: 70px;
+        font-size: 20px;
+        margin-top: 20px;
+       
+        
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .git{
+        background-color: #74992e;
+        border-radius: 10px;
+        display: flex;
+    }
+    .img{
+        height: 900px;
+        width: 100%;
+    }
+    #input{
+        padding: 15px 120px;
+        margin-top: 100px;
+        margin-left: 400px;
+        font-size: 30px;
+
+    }
+    button{
+        padding: 13px 60px;
+        font-size: 30px;
+        color: aqua;
+        background-color: gray;
+    }
+    .card{
+        background-color: gray;
+        margin-left: 50px;
+        margin-top: 20px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: white
+        ;
+    }
+    .data{
+        width: 1640px;
+        height: 900px;
+        margin-top: 50px;
+        margin-left: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+        </style>
+</head>
+
+<body>
+    <div class="git">
+        <div><a href="../homePage/homePage.html"><img class="image" src="https://cdn.iconscout.com/icon/free/png-512/free-github-169-1174970.png?f=avif&w=256" alt="logo"/></a></div>
+        <div class="user"><a href="../userpage/user.html"><i>USERS</i></a></div >
+        <div class="repo"><a href="../repository/repo.html"><i>REPOSITORIES</i></a></div>
+        <div class="topic"><a href="../TOPIC/topic.html"><i>TOPICS</i></a></div>
+       
+    </div>
+    <!-- <div><img  class="img" src="https://cdn.neowin.com/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg" alt="image for background">
+    </div> -->
+    <input type="text" name="" id="input" class="search"/>
+    <button class="search" onclick="searchApi()">search</button>
+    <div class="data"></div>
+</body>
+<script>
+
+    async function fetchData(url){
+    const response = await fetch(url);
+    const jsonData = await response.json()
+    return jsonData
+    }
+    let result=[];
+    let data = document.querySelector(".data");
+    async function searchApi(){
+    let search = document.querySelector(".search").value;
+    
+    let response = await fetchData(`https://api.github.com/search/topics?q=${search}`);
+    console.log(response);
+    
+    
+    
+    let usersdata = response["items"]
+    result=response["items"];
+    
+    if(usersdata.length !== 0){
+        for(let i=0; i<usersdata.length; i++){
+            let div=document.createElement("div");
+            div.setAttribute("class", "card")
+            
+            // let avatar = document.createElement("img");
+            // avatar.setAttribute("src", usersdata[i].avatar_url);
+            // avatar.style.width = "100px";
+            // avatar.style.height = "100px";
+            
+            let name = document.createElement("div");
+            name.innerText = usersdata[i].name;
+            name.style.fontSize="30px";
+            
+            let score = document.createElement("div");
+            score.innerText = `score : ${usersdata[i].score}`;
+            score.style.fontSize="30px";
+            
+            // let site_admin = document.createElement("div");
+            // site_admin.innerText = `${usersdata[i].site_admin ? "" : "Not "}Site admin.`
+
+            let updated_at = document.createElement("div");
+            updated_at.innerText = usersdata[i].updated_at;
+            updated_at.style.fontSize="20px";
+
+            div.setAttribute("onclick",`displayCard(${i})`);
+
+            
+            div.append(name,score,updated_at);
+            data.append(div);
+
+            }
+            }else{
+            let div=document.createElement("div");
+            let avatar = document.createElement("img");
+            avatar.setAttribute("src", "https://github.githubassets.com/images/modules/open_graph/github-octocat.png");
+            avatar.style.width = "500px";
+            avatar.style.height = "500px";
+            div.append(avatar);
+            data.append(div);
+        }
+    }  
+    function displayCard(index){
+        console.log(result[index])
+        let div=document.createElement("div");
+        div.style.marginTop="-900px"
+        div.setAttribute("class", "card");
+
+            let name = document.createElement("div");
+            name.innerText = result[index].name;
+            name.style.fontSize="30px";
+            
+            let score = document.createElement("div");
+            score.innerText = `score : ${result[index].score} `;
+            score.style.fontSize="30px";
+
+            let updated_at = document.createElement("div");
+            updated_at.innerText = result[index].updated_at;
+            updated_at.style.fontSize="20px";
+            
+            
+
+            div.setAttribute("onclick",`displayCard(${result[index]})`);
+
+            
+            div.append(name,score,updated_at);
+            data.innerText="";
+            document.body.append(div); 
+    }
+
+
+ 
+</script>
+
+</html>

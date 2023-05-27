@@ -1,0 +1,32 @@
+body{
+     background-color: black; 
+
+}
+.container{
+    font-size: 100px;
+    font-family: Orbitron;
+    color:  #17D4FE;
+    
+}
+.container1{
+    font-size: 100px;
+    font-family: Orbitron;
+    color:  #17D4FE;
+    margin-top: 400px;
+}
+.container2{
+    font-size: 100px;
+    font-family: Orbitron;
+    color:  #17D4FE;
+}
+span{
+    font-size: 100px;
+    font-family: Orbitron;
+    color:  #17D4FE;
+}
+.time{
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    margin-top: 300px;
+}

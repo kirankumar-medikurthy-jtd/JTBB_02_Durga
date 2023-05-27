@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number"  class="input"/>
+    <button class="convert" onclick="convert()">convert</button>
+    <h1 class="display"></h1>
+    
+</body>
+    <script>
+        function convert(){
+            let number=document.querySelector(".input").value;
+            let fah=number*1.8+32;
+           // alert(fah);
+           let dispaly=document.querySelector(".display").innerHTML=` ${fah} f`;
+          // let dispaly2=document.querySelector(".display").innerHTML="fah"+fah;
+        }
+    </script>
+</html>

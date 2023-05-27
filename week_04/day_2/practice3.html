@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number"  class="input"/>
+    <button class="convert" onclick="convert()">check</button>
+    <h1 class="display"></h1>
+    
+</body>
+<script>
+    function convert(){
+          let num=document.querySelector(".input").value;
+    if(num>0){
+        let dis=document.querySelector(".display").innerHTML=`${num} is positive`;
+    }
+    else if(num==0){
+        let dis=document.querySelector(".display").innerHTML=`${num} is zero`;
+    }
+    else{
+        let dis=document.querySelector(".display").innerHTML=`${num} is negetive`;
+    }
+}
+</script>
+</html>

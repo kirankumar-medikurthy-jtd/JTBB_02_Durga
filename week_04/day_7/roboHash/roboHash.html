@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-size: 40px;
+    }
+    input{
+        margin-left: 450px;
+        padding: 10px 200px;
+        margin-top: 100px;
+        font-size: 30px;
+    }
+    button{
+        padding: 10px 60px;
+        margin-top: 100px;
+        font-size: 30px;
+        color: aqua;
+        background-color: gray;
+        cursor: pointer;
+    }
+    h2{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .image{
+        margin-left: 750px;
+    }
+</style>
+<body>
+    <h1>RoboHash</h1>
+    <input type="text" placeholder="RoboHashmap..." class="robot"/>
+    <button onclick="RoboHash()">search</button>
+    <h2>Here your RoboHash</h2>
+    <img alt="" class="image">
+
+</body>
+<script>
+    async function RoboHash() {
+        let robot=document.querySelector(".robot").value;
+        let image=document.querySelector(".image");
+        image.src= `https://robohash.org/${robot}`;
+    }
+</script>
+</html>

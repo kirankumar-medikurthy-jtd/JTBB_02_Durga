@@ -1,94 +1,25 @@
-<html>
-	<head>
-		<title> Login Froms </title>
-	</head>
-	<style type="text/css">
-		#formLayout {
-			display : flex;
-			flex-direction : column;
-			width: 300px;
-			margin : auto;
-		}
-		input {
-			margin : 5px 0px;
-		}
-		
-		table{
-			border : 1px solid red;
-		}
-		th{
-			border:1px solid blue;
-		}
-		#DisplayTableDetails table{
-			
-			margin : 10px auto;
-		}
-        td{
-            margin-left: 100px;
-            border:1px solid blue;
-        }
-	</style>
-	<body>
-		<div id="formLayout">
-			<input class="employee" type="text" placeholder="Employee Name"/>
-			<input class="department" type="text" placeholder= "Department"/>
-			<input class="sales1" type="text" placeholder="Sales1"/>
-			<input class="sales2" type="text" placeholder= "Sales2"/>
-			<input class="submitButton" type="submit" value="submit"/>
-			
-		</div>
-		<div id="DisplayTableDetails">
-		</div>
-	</body>
-	<script>
-        
-        let emp=document.querySelector(".employee");
-        let depart=document.querySelector(".department");
-        let sale1=document.querySelector(".sales1")
-        let sale2=document.querySelector(".sales2")
-        let button=document.querySelector(".submitButton")
-        button.onclick=function(){
-            let div=document.createElement("div");
-            let table=document.createElement("table");
-            div.append(table);
-            let tr=document.createElement("tr");
-            table.append(tr);
-            let th1=document.createElement("th");
-            th1.textContent="employee"
-            let th2=document.createElement("th");
-            th2.textContent="department"
-            let th3=document.createElement("th");
-            th3.textContent="sales1"
-            let th4=document.createElement("th");
-            th4.textContent="sales2"
-            let th5=document.createElement("th");
-            th5.textContent="Avarage"
-            tr.append(th1,th2,th3,th4,th5);
-            let app=document.querySelector("#DisplayTableDetails");
-            app.append(div);
-            button.onclick=function(){
-            let emp=document.querySelector(".employee").value;
-            let depart=document.querySelector(".department").value;
-            let sale1=document.querySelector(".sales1").value;
-            let sale2=document.querySelector(".sales2").value;
-            //let button=document.querySelector(".submitButton").value
-            let tr2=document.createElement("tr");
-            let td1=document.createElement("td");
-            td1.textContent=emp;
-            let td2=document.createElement("td");
-            td2.textContent=depart;
-            let td3=document.createElement("td");
-            td3.textContent=sale1;
-            let td4=document.createElement("td");
-            td4.textContent=sale2;
-            let td5=document.createElement("td");
-            td5.textContent=sale1+sale2/2;
-            tr2.append(td1,td2,td3,td4,td5);
-            let app2=document.querySelector("#DisplayTableDetails");
-            app2.append(tr2);
-            console.log(td1,td2,td3,td4,td5);
-            }
-
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <input type="number"  class="input"/>
+       <button class="convert" onclick="convert()">convert</button>
+       <h1 class="display"></h1>
+       
+</body>
+    <script>
+         function convert(){
+            let num=document.querySelector(".input").value;
+            let fact=0.621371;
+            let miles=num*fact;
+           // alert(miles);
+            let display=document.querySelector(".display").innerHTML=`${miles} miles`;
+            let display1=document.querySelector(".display").innerHTML=miles + `miles`;    
+         }
     </script>
 </html>
