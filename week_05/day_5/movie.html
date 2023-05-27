@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>marvel</title>
+    </head>
+    <style>
+        body{
+            background-color: navy;
+        }
+        .title{
+            color: white;
+        }
+        input{
+            color: skyblue;
+            padding: 10px 100px;
+            font-size: 30px;
+
+        }
+        button{
+            background-color: gray;
+            border: none;
+            border-radius: 10px;
+            padding: 20px 50px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <div class="div">
+            <input type="text" place holder="spider" class="search">
+            <button onclick="searchMarval()" class="click">click</button>
+        </div>
+        <div id="root">
+
+        </div>
+    </body>
+    <script>
+        
+        async function fetchData(url){
+            const response= await fetch(url);
+            const jsonData=await response.json();
+            return jsonData;
+        }
+        let root=document.querySelector("#root");
+        async function searchMarval(){
+                let search=document.querySelector(".search").value;
+                let response=await fetchData(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${search}&apikey=5c1c8093e0943a61cd325e65e7cadb6b&hash=432441970b33138aaa8cf3f71db35837bc36e9c5`);
+                //console.log(response);
+                let UserData=response["data"];
+                //console.log(UserData);
+                let ans=UserData["results"];
+                //console.log(ans);
+                for(let i=0;i<ans.length;i++){
+                   let div=document.createElement("div");
+                   let title=document.createElement("h1");
+                   title.setAttribute("class","title");
+                   title.innerHTML=ans[i].name;
+                   div.append(title);
+                   root.append(div);
+                }
+
+        }
+        
+        
+
+
+        
+    </script>
+</html>
